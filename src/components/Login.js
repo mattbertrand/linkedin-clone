@@ -7,6 +7,9 @@ const Login = (props) => {
 				<a href="/">
 					<img src="/images/login-logo.svg" alt="linkedin-login-logo"/>
 				</a>
+				<div>
+					<Join>Join Now</Join>
+				</div>
 			</Nav>
 		</Container>
 	)
@@ -30,6 +33,20 @@ const Nav = styled.nav`
 		@media (max-width: 768px) {
 			padding: 0 5px;
 		}
+	}
+`;
+
+const Join = styled.a`
+	font-size: 16px;
+	padding: 10px 12px;
+	text-decoration: none;
+	border-radius: 4px;
+	color: rgba(0, 0, 0, 0.6);
+	margin-right: 12px;
+	&:hover {
+		background-color: rgba(0, 0, 0, 0.08);
+		color: rgba(0, 0, 0, 0.9);
+		text-decoration: none;
 	}
 `;
 
