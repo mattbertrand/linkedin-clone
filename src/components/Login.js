@@ -85,7 +85,7 @@ const Section = styled.section`
 	max-width: 128px;
 	align-items: center;
 	margin: auto;
-	@media (max-width: 768) {
+	@media (max-width: 768px) {
 		margin: auto;
 		min-height: 0px;
 	}
