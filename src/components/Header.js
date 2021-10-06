@@ -17,6 +17,9 @@ const Header = (props) => {
 					<img src="/images/search-icon.svg" alt="search-icon" />
 				</SearchIcon>
 				</Search>
+				<Nav>
+					nav menu
+				</Nav>
 			</Content>
 		</Container>
 		)
@@ -83,5 +86,18 @@ const SearchIcon = styled.div`
 	justify-content: center;
   	align-items: center;
 `;
+
+const Nav = styled.nav`
+	margin-left: auto;
+	display: block;
+	@media (max-width: 768px) {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		background: white;
+		width: 100%;
+	}
+`;
+
 
 export default Header;
