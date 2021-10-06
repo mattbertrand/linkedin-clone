@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import Leftside from "./Leftside";
+import Main from "./Main";
+import Rightside from "./Rightside";
 
 const Home = (props) => {
 	return (
@@ -8,9 +11,9 @@ const Home = (props) => {
 				<p>Find talented pros in record time with Upwork and keep business moving</p>
 			</Section>
 			<Layout>
-				<div>Left side</div>
-				<div>Main</div>
-				<div>Right side</div>
+				<Leftside/>
+				<Main/>
+				<Rightside/>
 			</Layout>
 		</Container>
 		)
@@ -56,7 +59,7 @@ const Section = styled.section`
 
 const Layout = styled.div`
 	display: grid;
-	grid-template-areas: "leftside main rightside";
+	grid-template-areas: "Leftside Main Rightside";
 	grid-template-columns: minmax()(0, 5fr) minmax(0, 12fr) minmax(300px, 7fr);
 	column-gap: 25px;
 	row-gap: 25px;
