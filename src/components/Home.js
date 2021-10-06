@@ -59,8 +59,8 @@ const Section = styled.section`
 
 const Layout = styled.div`
 	display: grid;
-	grid-template-areas: "Leftside Main Rightside";
-	grid-template-columns: minmax()(0, 5fr) minmax(0, 12fr) minmax(300px, 7fr);
+	grid-template-areas: "leftside main rightside";
+	grid-template-columns: minmax(0, 5fr) minmax(0, 12fr) minmax(300px, 7fr);
 	column-gap: 25px;
 	row-gap: 25px;
 	/* grid-template-rows: auto; */
