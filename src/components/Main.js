@@ -53,6 +53,16 @@ const Main = (props) => {
 							<img src="/images/image-linkedin-project.jpeg" alt="planet-earth-image" />
 						</a>
 					</SharedImg>
+					<SocialCounts>
+						<li>
+							<button>
+								<img src="https://static-exp1.licdn.com/sc/h/d310t2g24pvdy4pt1jkedo4yb" alt="like-button" />
+								<img src="https://static-exp1.licdn.com/sc/h/5thsbmikm6a8uov24ygwd914f" alt="clap-button" />
+								<span>75</span>
+							</button>
+						</li>
+						<a>2 comments</a>
+					</SocialCounts>
 				</Article>
 			</div>
 		</Container>
@@ -204,6 +214,24 @@ const SharedImg = styled.div`
 		object-fit: contain;
 		width: 100%;
 		height: 100%;
+	}
+`;
+
+const SocialCounts = styled.ul`
+	line-height: 1.3;
+	display: flex;
+	align-items: flex-start;
+	overflow: auto;
+	margin: 0 16px;
+	padding: 8px 0;
+	border-bottom: 1px solid #e9e5df;
+	list-style: none;
+	li {
+		margin-right: 5px;
+		font-size: 12px;
+		button {
+			display: flex;
+		}
 	}
 `;
 
