@@ -45,6 +45,14 @@ const Main = (props) => {
 							<img src="/images/ellipsis-icon.svg" alt="ellipsis-icon" />
 						</button>
 					</SharedActor>
+					<Description>
+						Description
+					</Description>
+					<SharedImg>
+						<a>
+							<img src="/images/image-linkedin-project.jpeg" alt="planet-earth-image" />
+						</a>
+					</SharedImg>
 				</Article>
 			</div>
 		</Container>
@@ -175,6 +183,27 @@ const SharedActor = styled.div`
 		background: transparent;
 		border: none;
 		outline: none;
+	}
+`;
+
+const Description = styled.div`
+	padding: 0 16px;
+	overflow: hidden;
+	color: rgba(0, 0, 0, 0.9);
+	font-size: 14px;
+	text-align: left;
+`;
+
+const SharedImg = styled.div`
+	margin-top: 8px;
+	width: 100%;
+	display: block;
+	position: relative;
+	background-color: #f9fafb;
+	img {
+		object-fit: contain;
+		width: 100%;
+		height: 100%;
 	}
 `;
 
