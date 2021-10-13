@@ -10,6 +10,12 @@ const PostModal = (props) => {
 						<img src="/images/close-icon.svg" alt="" />
 					</button>
 				</Header>
+				<SharedContent>
+					<UserInfo>
+						<img src="/images/user.svg" alt="user"/>
+						<span>Name</span>
+					</UserInfo>
+				</SharedContent>
 			</Content>
 		</Container>
 	)
@@ -59,6 +65,36 @@ const Header = styled.div`
 		svg {
 			pointer-events: none;
 		}
+	}
+`;
+
+const SharedContent = styled.div`
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	overflow: auto;
+	vertical-align: baseline;
+	background: transparent;
+	padding: 8px 12px;
+`;
+
+const UserInfo = styled.div`
+	display: flex;
+	align-items: center;
+	padding: 12px 24px;
+	svg,
+	img {
+		width: 48px;
+		height: 48px;
+		background-clip: content-box;
+		border: 2px solid transparent;
+		border-radius: 50%;
+	}
+	span {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 1.5;
+		margin-left: 5px;
 	}
 `;
 
