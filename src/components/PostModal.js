@@ -4,51 +4,60 @@ import { useState } from 'react';
 const PostModal = (props) => {
 	const [editorText, setEditorText] = useState('');
 	
+	const reset = (e) => {
+		setEditorText("")
+		props.handleClick(e)
+	}
+	
 	return (
-		<Container>
-			<Content>
-				<Header>
-					<h2>Create a post</h2>
-					<button>
-						<img src="/images/close-icon.svg" alt="close-icon" />
-					</button>
-				</Header>
-				<SharedContent>
-					<UserInfo>
-						<img src="/images/user.svg" alt="user"/>
-						<span>Name</span>
-					</UserInfo>
-					<Editor>
-						<textarea 
-							value={editorText} 
-							onChange={(e) => setEditorText(e.target.value)}
-							placeholder="What do you want to talk about?"
-							autoFocus={true}
-						>
-						</textarea>
-					</Editor>
-				</SharedContent>
-				<ShareCreation>
-					<AttachAssets>
-						<AssetButton>
-							<img src="/images/share-image.svg" alt="share-image" />
-						</AssetButton>
-						<AssetButton>
-							<img src="/images/share-video.svg" alt="share-video" />
-						</AssetButton>
-					</AttachAssets>
-					<ShareComment>
-						<AssetButton>
-							<img src="/images/share-comment.svg" alt="share-comment" />
-							Anyone
-						</AssetButton>
-					</ShareComment>
-					<PostButton>
-						Post
-					</PostButton>
-				</ShareCreation>
-			</Content>
-		</Container>
+		<>
+			{ props.showModal === "open" &&
+				<Container>
+					<Content>
+						<Header>
+							<h2>Create a post</h2>
+							<button onClick={(event) => reset(event)}>
+								<img src="/images/close-icon.svg" alt="close-icon" />
+							</button>
+						</Header>
+						<SharedContent>
+							<UserInfo>
+								<img src="/images/user.svg" alt="user"/>
+								<span>Name</span>
+							</UserInfo>
+							<Editor>
+								<textarea 
+									value={editorText} 
+									onChange={(e) => setEditorText(e.target.value)}
+									placeholder="What do you want to talk about?"
+									autoFocus={true}
+								>
+								</textarea>
+							</Editor>
+						</SharedContent>
+						<ShareCreation>
+							<AttachAssets>
+								<AssetButton>
+									<img src="/images/share-image.svg" alt="share-image" />
+								</AssetButton>
+								<AssetButton>
+									<img src="/images/share-video.svg" alt="share-video" />
+								</AssetButton>
+							</AttachAssets>
+							<ShareComment>
+								<AssetButton>
+									<img src="/images/share-comment.svg" alt="share-comment" />
+									Anyone
+								</AssetButton>
+							</ShareComment>
+							<PostButton>
+								Post
+							</PostButton>
+						</ShareCreation>
+					</Content>
+				</Container>
+			}
+		</>
 	)
 }
 
@@ -93,7 +102,7 @@ const Header = styled.div`
 		width: 40px;
 		min-width: auto;
 		color: rgba(0, 0, 0, 0.15);
-		svg {
+		svg, img {
 			pointer-events: none;
 		}
 	}
