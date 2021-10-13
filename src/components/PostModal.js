@@ -103,8 +103,14 @@ const Header = styled.div`
 		width: 40px;
 		min-width: auto;
 		color: rgba(0, 0, 0, 0.15);
+		border: transparent;
+		background-color: white;
 		svg, img {
 			pointer-events: none;
+		}
+		&:hover {
+			background-color: #F8F8FF;
+			border-radius: 50%;
 		}
 	}
 `;
@@ -151,6 +157,12 @@ const AssetButton = styled.button`
 	height: 40px;
 	min-width: auto;
 	color: rgba(0, 0, 0, 0.5);
+	border: transparent;
+	background-color: white;
+	&:hover {
+		background-color: #F8F8FF;
+		border-radius: 30%;
+	}
 `;
 
 const AttachAssets = styled.div`
@@ -175,7 +187,7 @@ const PostButton = styled.button`
 	border-radius: 20px;
 	padding-left: 16px;
 	padding-right: 16px;
-	background: ${(props) => (props.disabled ? 'rgba(0, 0, 0, 0.8)' : "#0a66c2")};
+	background: ${(props) => (props.disabled ? 'rgba(0, 0, 0, 0.2)' : "#0a66c2")};
 	color: ${(props) => (props.disabled ? 'rgba(1, 1, 1, 0.2)' : "white")};
 	&:hover {
 		background: ${(props) => (props.disabled ? 'rgba(0, 0, 0, 0.08)' : "#004182")};
@@ -188,6 +200,9 @@ const Editor = styled.div`
 		width: 100%;
 		min-height: 100px;
 		resize: none;
+		border: none;
+		outline: none;
+		font-family: sans-serif;
 	}
 	input {
 		width: 100%;

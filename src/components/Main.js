@@ -143,6 +143,9 @@ const ShareBox = styled(CommentCard)`
 			display: flex;
 			align-items: center;
 			font-weight: 600;
+			&:hover {
+				background-color: #F8F8FF
+			}
 		}
 		&:first-child {
 			display: flex;
@@ -295,6 +298,9 @@ const SocialActions = styled.div`
 			span {
 				margin-left: 8px;
 			}	
+		}
+		&:hover {
+			background-color: #F8F8FF;
 		}
 	}
 `;
